@@ -2,7 +2,7 @@
 //Crea un objeto carro haciendo abstracción de sus atributos y un objeto anidado
 
 let carro = {
-    color: "rojo",
+    color: "gris",
     numeropuertas: 7,
     marca: "Toyota",
     matricula: "p457p",
@@ -10,26 +10,59 @@ let carro = {
     modelo: 2000,
     caracteristicas: ["Franjas rojas", "llantas", "ventanas"]
 }
+
+let camion = {
+    color: "rojo",
+    numeropuertas: 2,
+    marca: "honda",
+    matricula: "p457p",
+    asientos: 4,
+    modelo: 1994,
+    caracteristicas: ["Franjas balncas", "llantas", "ventanas"]
+}
+
+let tractor = {
+    color: "blanco",
+    numeropuertas: 4,
+    marca: "Hiunday",
+    matricula: "p457p",
+    asientos: 4,
+    modelo: 1989,
+    caracteristicas: ["Franjas negras", "llantas", "ventanas"]
+}
+
 console.log(carro)
 console.log(carro.caracteristicas[1]);
 
 //crear función que devuelva la marca del carro
 
-//let devolvermarca = a => console.log(marca);
-function devolver(vehiculo){
-    return vehiculo.marca
+function mostrarMarca(vehiculo){
+    console.log(vehiculo.marca) //Imprime el parametro 'marca' del objeto que se pasa por la función
+
+    document.write("<br>" + "El coche con la marca " + `${vehiculo.marca}`) //Se imprime en el HTML el parametro 'marca' del objeto 
 }
-let devuelvemarcacarro = devolver(carro.marca);
-console.log(devuelvemarcacarro);
-document.write("<br>" + "El carro con marca" + ' ' + carro.marca);
 
 //crea una función que devuelva la cantidad de puertas que tiene el carro
 
-let cantidad = devolverpuertas => console.log(cantidad)
-console.log(carro.numeropuertas)
-document.write(' ' +  "tiene" + ' '+ carro.numeropuertas + ' ' + "puertas");
+function cantidadPuertas (vehiculo){
+    console.log(vehiculo.numeropuertas)
+    document.write(' ' +  "tiene" + ' ' + `${vehiculo.numeropuertas}` + ' ' + "puertas");
+}
 
-//crear ima función que devuelva objeto anidado
-let objeto = anidar =>(objeto);
-console.log()
-document.write(' ' + "y una característica es que tiene" + ' ' + carro.caracteristicas[0]);
+
+//crear una función que devuelva objeto anidado
+function devolveratributo (vehiculo){
+    console.log(vehiculo.caracteristicas[0])
+    document.write(' ' + "y una característica es que tiene" + ' ' + `${vehiculo.caracteristicas[0]}`);
+}
+
+function mostrarDatosCompletos(vehiculo){
+    mostrarMarca(vehiculo);
+    cantidadPuertas(vehiculo);
+    devolveratributo(vehiculo);
+}
+
+mostrarDatosCompletos(carro);
+mostrarDatosCompletos(camion);
+mostrarDatosCompletos(tractor);
+
