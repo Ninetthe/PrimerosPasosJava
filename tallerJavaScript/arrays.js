@@ -65,16 +65,13 @@ document.write("<br>" + cambiandotamaños.toUpperCase());
 
 
 //Crear una función que reciba un array de nombres y que convierta la primera letra de cada nombre en mayúscula.
-let separadorDeLetras = cambiandotamaños.split();
-let 
 
-
-function mayusPrimeraLetra(primeraMayuscula) {
-    let primeraMayuscula = cambiandotamaños.split(" ").map(primeraMayuscula => {
-        return primeraMayuscula[0].toUpperCase() + primeraMayuscula.slice(1);
+function mayusPrimeraLetraDeOracion(oracion) {
+    let palabras = oracion.split(" ").map(palabra => {
+        return palabra[0].toUpperCase() + palabra.slice(1);
     })
-    return primeraMayuscula.join(" ");
+    return palabras.join(" ");
 }
 
-console.log(mayusPrimeraLetra);
+console.log(mayusPrimeraLetraDeOracion(cambiandotamaños));
 //Estoy Aprendiendo A Codificar

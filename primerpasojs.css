@@ -1,3 +1,9 @@
 body {
     background-color:blanchedalmond;
 }
+#bttn1 {
+    width: 100px;
+    height: 30px;
+    color: aqua;
+    background-color: brown;
+}

@@ -38,6 +38,7 @@ function imprimirSaludo(saludo, nombre) {
     return saludo + ' ' + nombre;
 }
 
+
 let saludoCompleto = imprimirSaludo(unsaludo, nombrecoder)
 console.log(saludoCompleto);
 document.write("<br>" + saludoCompleto);
@@ -57,7 +58,7 @@ document.write("<br>" + nuevasuma);
 
 //Crear función que determine si un número es par o impar. Imprimir consola y navegador
 
-let numeronuevo = 15;
+let numeronuevo = 50;
 
 function paroImpar(int) {
     if(int % 2 == 0) {
